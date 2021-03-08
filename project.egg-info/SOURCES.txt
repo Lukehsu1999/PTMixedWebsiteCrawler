@@ -1,0 +1,14 @@
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+pt_mixed_website_crawler/__init__.py
+pt_mixed_website_crawler/items.py
+pt_mixed_website_crawler/middlewares.py
+pt_mixed_website_crawler/pipelines.py
+pt_mixed_website_crawler/settings.py
+pt_mixed_website_crawler/spiders/__init__.py
+pt_mixed_website_crawler/spiders/cralwer.py
+pt_mixed_website_crawler/spiders/test.py
