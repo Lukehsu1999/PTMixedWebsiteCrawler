@@ -12,6 +12,7 @@ pt_mixed_website_crawler/pipelines.py
 pt_mixed_website_crawler/settings.py
 pt_mixed_website_crawler/spiders/__init__.py
 pt_mixed_website_crawler/spiders/amchamBusinessSpider.py
+pt_mixed_website_crawler/spiders/amchamCultureSpider.py
 pt_mixed_website_crawler/spiders/amchamHumansSpider.py
 pt_mixed_website_crawler/spiders/amchamPoliticsSpider.py
 pt_mixed_website_crawler/spiders/amchamSocialSpider.py

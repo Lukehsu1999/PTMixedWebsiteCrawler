@@ -1,6 +1,6 @@
 import scrapy
-class AmchamBusinessSpider(scrapy.Spider):
-    name = 'amchamBusinessSpider'
+class AmchamCultureSpider(scrapy.Spider):
+    name = 'amchamCultureSpider'
     start_urls = ['https://topics.amcham.com.tw/category/wine-dine/', 'https://topics.amcham.com.tw/category/travel-and-culture/']
 
     def parse(self, response):
