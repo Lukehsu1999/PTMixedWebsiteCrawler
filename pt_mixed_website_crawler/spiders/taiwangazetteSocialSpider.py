@@ -8,7 +8,7 @@ class TaiwangazetteSocialSpider(scrapy.Spider):
             yield {
                 'Title': post.css('.entry-title--list a::text')[1].get(),
                 'Blurb': post.css('.entry-excerpt em::text')[0].get(),
-                'Image': post.css('.excerpt-thumb img::attr(data-src)').extract(),
-                'Link': post.css('.entry-title a::attr(href)').extract(),
+                'Image': post.css('.excerpt-thumb img::attr(data-src)').extract()[0],
+                'Link': post.css('.entry-title a::attr(href)').extract()[0],
                 'OP': "Taiwanese American.org"
             }

@@ -8,7 +8,7 @@ class TaiwaninsightPoliticsSpider(scrapy.Spider):
             yield {
                 'Title': post.css('.entry-title a::text')[0].get(),
                 'Blurb': post.css('.entry-content p::text')[0].get(),
-                'Image': post.css('img::attr(src)').extract(),
-                'Link': post.css('.entry-title a::attr(href)').extract(),
+                'Image': post.css('img::attr(src)').extract()[0],
+                'Link': post.css('.entry-title a::attr(href)').extract()[0],
                 'OP': "Taiwanese American.org"
             }

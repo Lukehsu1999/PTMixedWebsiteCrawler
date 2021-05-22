@@ -8,7 +8,7 @@ class NewbloommagCultureSpider(scrapy.Spider):
             yield {
                 'Title': post.css('.cb-post-title a::text')[0].get(),
                 'Blurb': post.css('.cb-excerpt ::text')[0].get(),
-                'Image': post.css('.cb-mask img::attr(src)').extract(),
-                'Link': post.css('.cb-mask a::attr(href)').extract(),
+                'Image': post.css('.cb-mask img::attr(src)').extract()[0],
+                'Link': post.css('.cb-mask a::attr(href)').extract()[0],
                 'OP': "New Bloom Mag"
             }

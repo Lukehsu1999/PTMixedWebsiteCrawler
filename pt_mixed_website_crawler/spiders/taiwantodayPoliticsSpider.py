@@ -8,7 +8,7 @@ class TaiwantodayPoliticsSpider(scrapy.Spider):
             yield {
                 'Title': post.css('h3::text').get(),
                 # 'Blurb': post.css('a::attr(href)').extract(),
-                # 'Image': post.css('a::attr(href)').extract(),
-                'Link': post.css('a::attr(href)').extract(),
+                # 'Image': post.css('a::attr(href)').extract()[0],
+                'Link': post.css('a::attr(href)').extract()[0],
                 'OP': "Taiwanese American.org"
             }

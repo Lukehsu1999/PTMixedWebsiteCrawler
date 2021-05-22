@@ -8,7 +8,7 @@ class NewbloommagSocialSpider(scrapy.Spider):
             yield {
                 'Title': post.css('.title a::text')[0].get(),
                 'Blurb': post.css('.excerpt ::text')[0].get(),
-                'Image': post.css('.mask img::attr(src)').extract(),
-                'Link': post.css('.read-more-wrap a::attr(href)').extract(),
+                'Image': post.css('.mask img::attr(src)').extract()[0],
+                'Link': post.css('.read-more-wrap a::attr(href)').extract()[0],
                 'OP': "No Man Is An Island"
             }
