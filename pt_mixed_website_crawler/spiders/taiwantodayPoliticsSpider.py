@@ -6,7 +6,7 @@ class TaiwantodayPoliticsSpider(scrapy.Spider):
     def parse(self, response):
         for post in response.css('li'):
             yield {
-                'Title': post.css('h3::text').get(),
+                'Topic': post.css('h3::text').get(),
                 # 'Blurb': post.css('a::attr(href)').extract(),
                 # 'Image': post.css('a::attr(href)').extract()[0],
                 'Link': post.css('a::attr(href)').extract()[0],
