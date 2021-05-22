@@ -10,5 +10,5 @@ class NewbloommagPoliticsSpider(scrapy.Spider):
                 'Blurb': post.css('.cb-excerpt ::text')[0].get(),
                 'Image': post.css('.cb-mask img::attr(src)').extract()[0],
                 'Link': post.css('.cb-mask a::attr(href)').extract()[0],
-                'OP': "New Bloom Mag"
+                'OP': "New Bloom"
             }
