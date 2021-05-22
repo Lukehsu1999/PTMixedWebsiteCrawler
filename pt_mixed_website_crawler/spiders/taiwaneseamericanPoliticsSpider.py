@@ -6,9 +6,9 @@ class TaiwaneseamericanPoliticsSpider(scrapy.Spider):
     def parse(self, response):
         for post in response.css('article'):
             yield {
-                'title': post.css('h2 *::text')[0].get(),
-                'content': post.css('.entry-content *::text')[0].get(),
-                'image': post.css('.text-center img::attr(src)').extract(),
-                'url': post.css('.read-more-link a::attr(href)').extract(),
-                'source': "Taiwanese American.org"
+                'Title': post.css('h2 *::text')[0].get(),
+                'Blurb': post.css('.entry-content *::text')[0].get(),
+                'Image': post.css('.text-center img::attr(src)').extract(),
+                'Link': post.css('.read-more-link a::attr(href)').extract(),
+                'OP': "Taiwanese American.org"
             }

@@ -6,9 +6,9 @@ class TaiwangazetteSocialSpider(scrapy.Spider):
     def parse(self, response):
         for post in response.css('article'):
             yield {
-                'title': post.css('.entry-title--list a::text')[1].get(),
-                'content': post.css('.entry-excerpt em::text')[0].get(),
-                'image': post.css('.excerpt-thumb img::attr(data-src)').extract(),
-                'url': post.css('.entry-title a::attr(href)').extract(),
-                'source': "Taiwanese American.org"
+                'Title': post.css('.entry-title--list a::text')[1].get(),
+                'Blurb': post.css('.entry-excerpt em::text')[0].get(),
+                'Image': post.css('.excerpt-thumb img::attr(data-src)').extract(),
+                'Link': post.css('.entry-title a::attr(href)').extract(),
+                'OP': "Taiwanese American.org"
             }

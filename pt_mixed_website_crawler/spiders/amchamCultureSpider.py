@@ -6,8 +6,9 @@ class AmchamCultureSpider(scrapy.Spider):
     def parse(self, response):
         for post in response.css('article'):
             yield {
-                'title': post.css('.entry-title a::text')[0].get(),
-                'content': post.css('.entry-summary p::text')[0].get(),
-                'image': post.css('img::attr(src)').extract(),
-                'url': post.css('.entry-title a::attr(href)').extract(),
+                'Title': post.css('.entry-title a::text')[0].get(),
+                'Blurb': post.css('.entry-summary p::text')[0].get(),
+                'Image': post.css('img::attr(src)').extract(),
+                'Link': post.css('.entry-title a::attr(href)').extract(),
+                'OP': "AmCham"
             }
