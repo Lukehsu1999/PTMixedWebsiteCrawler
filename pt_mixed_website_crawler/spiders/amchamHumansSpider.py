@@ -10,4 +10,5 @@ class AmchamHumansSpider(scrapy.Spider):
                 'content': post.css('.entry-summary p::text')[0].get(),
                 'image': post.css('img::attr(src)').extract(),
                 'url': post.css('.entry-title a::attr(href)').extract(),
+                'source': "AmCham"
             }

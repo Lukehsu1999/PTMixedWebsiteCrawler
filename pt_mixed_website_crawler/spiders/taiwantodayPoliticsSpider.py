@@ -10,4 +10,5 @@ class TaiwantodayPoliticsSpider(scrapy.Spider):
                 # 'content': post.css('a::attr(href)').extract(),
                 # 'image': post.css('a::attr(href)').extract(),
                 'url': post.css('a::attr(href)').extract(),
+                'source': "Taiwanese American.org"
             }

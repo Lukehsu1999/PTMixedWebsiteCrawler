@@ -10,4 +10,5 @@ class NewbloommagSocialSpider(scrapy.Spider):
                 'content': post.css('.cb-excerpt ::text')[0].get(),
                 'image': post.css('.cb-mask img::attr(src)').extract(),
                 'url': post.css('.cb-mask a::attr(href)').extract(),
+                'source': "New Bloom Mag"
             }

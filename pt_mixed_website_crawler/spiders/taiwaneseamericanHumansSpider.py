@@ -10,4 +10,5 @@ class TaiwaneseamericanHumansSpider(scrapy.Spider):
                 'content': post.css('.entry-content *::text')[0].get(),
                 'image': post.css('.text-center img::attr(src)').extract(),
                 'url': post.css('.read-more-link a::attr(href)').extract(),
+                'source': "Taiwanese American.org"
             }

@@ -10,4 +10,5 @@ class LausanSocialSpider(scrapy.Spider):
                 'content': post.css('.excerpt ::text')[0].get(),
                 'image': post.css('.mask img::attr(src)').extract(),
                 'url': post.css('.title a::attr(href)').extract(),
+                'source': "Lausan"
             }

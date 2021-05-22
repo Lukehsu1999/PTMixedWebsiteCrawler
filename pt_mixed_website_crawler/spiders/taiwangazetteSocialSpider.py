@@ -10,4 +10,5 @@ class TaiwangazetteSocialSpider(scrapy.Spider):
                 'content': post.css('.entry-excerpt em::text')[0].get(),
                 'image': post.css('.excerpt-thumb img::attr(data-src)').extract(),
                 'url': post.css('.entry-title a::attr(href)').extract(),
+                'source': "Taiwanese American.org"
             }
