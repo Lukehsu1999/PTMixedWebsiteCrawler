@@ -16,5 +16,5 @@ class TaiwaninsightPoliticsSpider(scrapy.Spider):
                 'Blurb': self.smart_truncate(post.css('.entry-content p::text')[0].get()),
                 'Image': post.css('img::attr(src)').extract()[0],
                 'Link': post.css('.entry-title a::attr(href)').extract()[0],
-                'OP': "Taiwanese Insight"
+                'OP': "Taiwan Insight"
             }
