@@ -1,6 +1,6 @@
 import scrapy
-class NewbloommagSocialSpider(scrapy.Spider):
-    name = 'newbloommagSocialSpider'
+class NoManisanisCultureSpider(scrapy.Spider):
+    name = 'nomanisanisCultureSpider'
     start_urls = ['https://nomanisanis.land/']
 
     def smart_truncate(self, content, length=163, suffix='...'):
